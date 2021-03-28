@@ -41,10 +41,10 @@ List * createList() {
 
 void * firstList(List * list) {
 
-  //list->head = ;
+  Node* aux= list->head;
   list->current = list->head;
 
-    return list->head;
+    return aux;
 }
 
 void * nextList(List * list) {
