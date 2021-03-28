@@ -42,7 +42,7 @@ List * createList() {
 void * firstList(List * list) {
 
   Node* aux= list->head;
-  list->current = list->head;
+  list->current = aux;
 
     return aux;
 }
