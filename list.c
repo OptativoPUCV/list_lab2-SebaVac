@@ -45,7 +45,7 @@ void * firstList(List * list) {
   nodo->next = list->head;
   list->head = nodo;
 
-    return list->head;
+    return nodo;
 }
 
 void * nextList(List * list) {
