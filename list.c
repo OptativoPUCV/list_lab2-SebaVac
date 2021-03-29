@@ -32,6 +32,10 @@ List * createList() {
 
   List* lista = (List*) malloc(sizeof(List));
 
+  lista->head = NULL;
+  lista->current = NULL;
+  lista->tail = NULL; 
+
      return lista;
 }
 
@@ -41,8 +45,9 @@ void * firstList(List * list) {
     return NULL;
   }
 
-  list->current = list->head;
-    return list->head;
+  list->current->data = list->head->data;
+
+    return list->current;
 }
 
 void * nextList(List * list) {
