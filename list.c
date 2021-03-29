@@ -52,13 +52,11 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
-  if(list->current == NULL){
+  if((list->head == NULL) && (list->current != NULL)){
     return NULL;
   }
   
   list->current->prev = list->current->next;
-
-  printf("%p",list->current->prev);
 
     return (void*)list->current->data;
 }
