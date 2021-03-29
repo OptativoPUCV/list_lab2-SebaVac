@@ -58,6 +58,8 @@ void * nextList(List * list) {
   
   list->current->prev = list->current->next;
 
+  printf("%p",list->current->data);
+
     return (void*)list->current->data;
 }
 
