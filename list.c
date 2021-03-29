@@ -69,6 +69,8 @@ void * lastList(List * list) {
       return NULL;
     }
     
+    list->current->prev = list->current->next;
+
     return (void*)list->tail->data;
 }
 
