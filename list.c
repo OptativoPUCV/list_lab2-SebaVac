@@ -75,6 +75,15 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
+
+  if((list->current == NULL) || (list->current->prev == NULL)){
+    return NULL;
+  }else{
+    list->current = list->current->prev;
+  }
+
+    list->current->next = list->current->prev;
+
     return NULL;
 }
 
