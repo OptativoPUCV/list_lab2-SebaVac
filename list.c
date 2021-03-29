@@ -69,7 +69,7 @@ void * lastList(List * list) {
       return NULL;
     }
     
-    list->current->prev = list->current->next;
+    list->current->prev = list->tail->next;
 
     return (void*)list->tail->data;
 }
