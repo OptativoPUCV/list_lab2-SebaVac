@@ -45,8 +45,6 @@ void * firstList(List * list) {
     return NULL;
   }
 
-  list->current->data = list->head->data;
-
     return list->head;
 }
 
