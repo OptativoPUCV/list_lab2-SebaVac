@@ -52,11 +52,12 @@ void * firstList(List * list) {
 
 void * nextList(List * list) {
 
-  if(list->current->next == NULL){
+  if(list->current == NULL){
     return NULL;
   }
   
-  list->current->data = list->current->next;
+  list->current->prev = list->current->next;
+  list->current->next =list->current->prev;
 
     return (void*)list->current->data;
 }
