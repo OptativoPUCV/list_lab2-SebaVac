@@ -170,3 +170,9 @@ Mon Mar 29 01:26:39 UTC 2021:
  tests:  2|5
 total_score: 15/70
 c446060
+Mon Mar 29 21:06:59 UTC 2021: 
+ list.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+ tests:  3|5
+total_score: 15/70
+8577fc1
