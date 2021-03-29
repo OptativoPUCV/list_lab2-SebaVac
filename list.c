@@ -58,7 +58,7 @@ void * nextList(List * list) {
   
   list->current->prev = list->current->next;
 
-  printf("%p",list->current->data);
+  printf("%p",list->current->prev);
 
     return (void*)list->current->data;
 }
