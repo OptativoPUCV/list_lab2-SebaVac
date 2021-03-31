@@ -110,17 +110,22 @@ void pushCurrent(List * list, const void * data) {
 
   Node* nodo = createNode(data);
   Node* aux = list->current;
-  nodo->data = data;
-  printf("%p",nodo->data);
 
   if(list->current->next == NULL){
-    list->current->next = nodo->prev;
+    list->current->prev->next = nodo;
+    nodo->prev = list->current->prev;
+    list->current->prev = nodo;
+    nodo->next = list->current;
   }else{
     while(aux->next != NULL){
       aux = aux->next;
     }
     aux->next = nodo;
     list->current = aux->next;
+    list->current->prev->next = nodo;
+    nodo->prev = list->current->prev;
+    list->current->prev = nodo;
+    nodo->next = list->current;
   }
 
 }
