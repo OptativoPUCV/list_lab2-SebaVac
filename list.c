@@ -119,7 +119,7 @@ void pushCurrent(List * list, const void * data) {
     }
     aux->next = nodo;
     list->current = aux->next;
-    list->current->data = nodo->data;
+    printf("%p",list->current->data);
   }
 
 }
