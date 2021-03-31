@@ -108,12 +108,16 @@ void pushBack(List * list, const void * data) {
 
 void pushCurrent(List * list, const void * data) {
 
-  Node* nodo =createNode(data);
+  Node* nodo = createNode(data);
+  Node* aux = list->current;
 
   if(list->current->next == NULL){
     list->current->next = nodo->prev;
   }else{
-    
+    while(aux->next != NULL){
+      aux = aux->next;
+    }
+    aux->next = nodo;
   }
 
 }
