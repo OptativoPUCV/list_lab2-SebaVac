@@ -118,6 +118,8 @@ void pushCurrent(List * list, const void * data) {
       aux = aux->next;
     }
     aux->next = nodo;
+    list->current = aux->next;
+    list->current->data = nodo->data;
   }
 
 }
