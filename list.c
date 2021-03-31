@@ -111,9 +111,10 @@ void pushCurrent(List * list, const void * data) {
   Node* nodo =createNode(data);
 
   if(nodo != NULL){
-    nodo->data = data;
-    nodo->next = list->current->next;
-    list->current->data = nodo;
+
+    list->current->next = nodo->prev;
+    list->current->next->data = nodo;
+    
   }
 }
 
